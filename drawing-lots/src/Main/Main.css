@@ -1,0 +1,42 @@
+.main {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  margin-top: 10%;
+  justify-content: center;
+  flex-direction: column;
+  gap: 100px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.count {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  font-size: 20px;
+}
+
+button {
+  width: 35px;
+  height: 35px;
+  border-radius: 50px;
+  border: 1px solid #e5e5e5;
+  color: #818181;
+  background-color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.button {
+  width: 370px;
+  padding: 15px;
+  border-radius: 10px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: #4880ee;
+}

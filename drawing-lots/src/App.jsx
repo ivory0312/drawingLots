@@ -1,28 +1,18 @@
-import { useState } from "react";
-import "./App.css";
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+
+import Main from "./Main/Main";
+import Input from "./Input/Input";
 
 function App() {
-  const [count, setCount] = useState(1);
-
-  const minus = () => {
-    setCount(count > 1 ? count - 1 : count);
-  };
-  const plus = () => {
-    setCount(count < 5 ? count + 1 : count);
-  };
-
   return (
-    <div className="App">
-      <div className="title">선택지는 몇 개인가요?</div>
-      <div className="count">
-        <button onClick={minus}>-</button>
-        {count}
-        <button onClick={plus}>+</button>
-      </div>
-      <div className="button" onClick>
-        다음으로
-      </div>
-    </div>
+    <>
+      {/* <Input /> */}
+      <Routes>
+        <Route path="/" element={<Main />} />
+        <Route path="/input" element={<Input />} />
+      </Routes>
+    </>
   );
 }
 
