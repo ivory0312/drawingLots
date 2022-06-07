@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Main.css";
 
 function Main() {
   const [count, setCount] = useState(1);
+  const navigate = useNavigate();
 
   const minus = () => {
     setCount(count > 1 ? count - 1 : count);
@@ -12,6 +14,7 @@ function Main() {
   };
   const goToNext = () => {
     localStorage.setItem("count", count);
+    navigate("/input");
   };
 
   return (
