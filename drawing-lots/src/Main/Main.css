@@ -24,7 +24,7 @@
   font-size: 20px;
 }
 
-button {
+.button {
   width: 35px;
   height: 35px;
   border-radius: 50px;
@@ -35,7 +35,7 @@ button {
   cursor: pointer;
 }
 
-.button {
+.nextButton {
   width: 370px;
   padding: 15px;
   border-radius: 10px;

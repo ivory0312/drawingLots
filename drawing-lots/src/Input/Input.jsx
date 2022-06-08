@@ -22,7 +22,7 @@ const Input = () => {
           </div>
         ))}
       </div>
-      <div className="button" onClick={goToNext}>
+      <div className="nextButton" onClick={goToNext}>
         다음으로
       </div>
     </div>
