@@ -4,10 +4,15 @@ import "./Input.css";
 
 const Input = () => {
   const count = Number(localStorage.getItem("count"));
-  const array = Array.from({ length: count }, () => 0);
+  const array = Array.from({ length: count }, (v, i) => i);
   const navigate = useNavigate();
 
+  const handleInput = (e, data) => {
+    array[data] = e.target.value;
+  };
+
   const goToNext = () => {
+    localStorage.setItem("array", array);
     navigate("/choice");
   };
 
@@ -15,10 +20,10 @@ const Input = () => {
     <div className="main">
       <div className="title">선택지를 입력해주세요</div>
       <div className="textField">
-        {array.map(() => (
+        {array.map((data) => (
           <div className="box">
             <img src={Icon} />
-            <input type="text" />
+            <input type="text" onChange={(e) => handleInput(e, data)} />
           </div>
         ))}
       </div>

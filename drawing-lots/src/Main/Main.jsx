@@ -14,7 +14,6 @@ function Main() {
   };
   const goToNext = () => {
     localStorage.setItem("count", count);
-    console.log(count);
     navigate("/input");
   };
 
